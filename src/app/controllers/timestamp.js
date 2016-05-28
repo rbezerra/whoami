@@ -6,7 +6,7 @@ import moment from "moment";
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-	res.render('index', {title: "Timestamp Micro Service"});
+	res.render('index', {title: "Timestamp Microservice"});
 });
 
 router.get('/:date', (req, res, next) => {
