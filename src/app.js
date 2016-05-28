@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 import compress from 'compression';
 import cookieParser from 'cookie-parser';
 import express from 'express';
-import favicon from 'serve-favicon';
+//import favicon from 'serve-favicon';
 import helmet from 'helmet';
 import mongoose from 'mongoose';
 
@@ -35,7 +35,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(compress());
 app.use(cookieParser());
-app.use(favicon(path.join(config.root, 'static/img/favicon.png')));
+//app.use(favicon(path.join(config.root, 'static/img/favicon.png')));
 app.use(helmet());
 // load all models
 require(path.join(config.root, 'app/models'));
