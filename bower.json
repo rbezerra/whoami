@@ -1,0 +1,13 @@
+{
+  "name": "timestamp-ms",
+  "version": "0.0.1",
+  "description": "timestamp microservice",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
+}
