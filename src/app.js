@@ -7,16 +7,16 @@ import cookieParser from 'cookie-parser';
 import express from 'express';
 //import favicon from 'serve-favicon';
 import helmet from 'helmet';
-import mongoose from 'mongoose';
+//import mongoose from 'mongoose';
 
 // BASIC CONFIG
 const config = {
   // address of mongodb
-  db: process.env.MONGOURI || 'mongodb://localhost:27017/test',
+  //db: process.env.MONGOURI || 'mongodb://localhost:27017/test',
   // environment
   env: process.env.NODE_ENV || 'development',
   // port on which to listen
-  port: 5000,
+  port: process.env.port || 5000,
   // path to root directory of this app
   root: path.normalize(__dirname)
 };
@@ -58,20 +58,13 @@ app.use((err, req, res, next) => {
   });
 });
 
-// MONGOOSE SET-UP
-mongoose.connect(config.db);
-const db = mongoose.connection;
-db.on('error', () => {
-  throw new Error(`unable to connect to database at ${config.db}`);
-});
-
 // START AND STOP
 const server = app.listen(config.port, () => {
   console.log(`listening on port ${config.port}`);
 });
 process.on('SIGINT', () => {
-  console.log('\nshutting down!');
-  db.close();
+  //console.log('\nshutting down!');
+  //db.close();
   server.close();
   process.exit();
 });
