@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "timestamp microservice",
   "main": "app.js",
+  "engines": {
+    "node": "4.4.7"
+  },
   "scripts": {
   	"postinstall": "gulp build",
     "start": "node ./build/app.js",
