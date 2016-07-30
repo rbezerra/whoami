@@ -4,7 +4,8 @@
   "description": "timestamp microservice",
   "main": "app.js",
   "scripts": {
-    "start": "gulp build && node ./build/app.js",
+  	"postinstall": "gulp build",
+    "start": "node ./build/app.js",
     "test": "gulp test"
   },
   "author": "rbezerra",
@@ -12,6 +13,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+  	"gulp": "^3.9.1",
     "body-parser": "^1.15.0",
     "compression": "^1.6.1",
     "cookie-parser": "^1.4.1",
