@@ -7,7 +7,7 @@
     "node": "4.4.7"
   },
   "scripts": {
-  	"postinstall": "gulp build",
+  	"postinstall": "bower install && gulp build",
     "start": "node ./build/app.js",
     "test": "gulp test"
   },
