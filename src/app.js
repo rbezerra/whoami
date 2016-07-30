@@ -60,7 +60,7 @@ app.use((err, req, res, next) => {
 
 // START AND STOP
 const server = app.listen(config.port, () => {
-  console.log(`listening on port ${config.port}`);
+  //console.log(`listening on port ${config.port}`);
 });
 process.on('SIGINT', () => {
   //console.log('\nshutting down!');
