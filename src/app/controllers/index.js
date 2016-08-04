@@ -9,6 +9,6 @@ import express from 'express';
 // create router
 const router = express.Router();
 // load other controllers
-router.use('/', require('./timestamp.js'));
+router.use('/', require('./whoami.js'));
 
 module.exports = router;
