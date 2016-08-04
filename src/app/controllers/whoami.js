@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/api/whoami', (req, res, next) => {
 	let response = {
-		"ipadress": req.ip,
+		"ipadress": req.ip.split(":")[3],
 		"language": req.get("accept-language").split(',')[0],
 		"software": uaParser(req.get("user-agent")).os
 	};
